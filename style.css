@@ -2,19 +2,27 @@ body {
   font-family: sans-serif;
   background-color: #ffe6ea;
   text-align: center;
-  margin-top: 100px;
+  margin: 0;
+  padding: 20px;
 }
 
 .question-container {
   position: relative;
+  height: 300px;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
 }
 
 .buttons {
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin: 10px;
   font-size: 20px;
   border: none;
@@ -46,6 +54,39 @@ button {
 }
 
 .result img {
-  width: 200px;
+  width: 80%;
+  max-width: 300px;
   height: auto;
+}
+
+#tryAgainMsg {
+  display: none;
+  font-size: 20px;
+  color: red;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .question-container {
+    height: 250px;
+  }
+
+  .result h2 {
+    font-size: 22px;
+  }
 }
