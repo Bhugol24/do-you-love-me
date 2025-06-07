@@ -2,36 +2,47 @@ body {
   font-family: sans-serif;
   background-color: #ffe6ea;
   text-align: center;
-  margin-top: 100px;
+  margin: 0;
+  padding: 20px;
 }
 
 .question-container {
   position: relative;
-  height: 300px;
+  height: 400px;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
 }
 
 .buttons {
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 24px;
   font-size: 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.00000000000001s ease;
+  position: relative;
+  z-index: 1;
 }
 
 #yesBtn {
   background-color: #ff69b4;
   color: white;
+  position: relative;
 }
 
 #noBtn {
   background-color: #d3d3d3;
   position: absolute;
+  z-index: 2;
 }
 
 .loader {
@@ -47,7 +58,8 @@ button {
 }
 
 .result img {
-  width: 200px;
+  width: 80%;
+  max-width: 300px;
   height: auto;
 }
 
