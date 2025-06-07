@@ -4,27 +4,23 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  height: 100vh;
+  overflow-y: auto; /* ✅ ENABLE VERTICAL SCROLL */
+  height: auto;
+  min-height: 100vh;
 }
 
 .question-container {
   position: relative;
   width: 100%;
-  height: 100%;
   max-width: 600px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  padding-top: 60px;
+  padding: 60px 20px 80px 20px;
+  box-sizing: border-box;
 }
 
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
-  padding: 0 20px;
 }
 
 #yesBtn {
@@ -35,14 +31,15 @@ h1 {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  position: relative;
   z-index: 10;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 #noBtn {
   background-color: #d3d3d3;
   position: absolute;
-  top: 200px;
+  top: 250px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
