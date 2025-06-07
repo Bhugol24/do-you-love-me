@@ -4,45 +4,49 @@ body {
   text-align: center;
   margin: 0;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .question-container {
   position: relative;
-  height: 400px;
+  height: 500px;
   max-width: 100%;
   overflow: hidden;
   margin: auto;
 }
 
 .buttons {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-button {
-  padding: 12px 24px;
-  font-size: 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.00000000000001s ease;
+  margin-top: 40px;
   position: relative;
-  z-index: 1;
+  height: 300px;
 }
 
 #yesBtn {
   background-color: #ff69b4;
   color: white;
   position: relative;
+  z-index: 2;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 #noBtn {
   background-color: #d3d3d3;
   position: absolute;
-  z-index: 2;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.00000000000001s ease;
 }
 
 .loader {
@@ -68,4 +72,31 @@ button {
   font-size: 20px;
   color: red;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .question-container {
+    height: 550px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    height: 320px;
+  }
+
+  #yesBtn,
+  #noBtn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .result h2 {
+    font-size: 22px;
+  }
 }
