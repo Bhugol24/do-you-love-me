@@ -3,41 +3,46 @@ body {
   background-color: #ffe6ea;
   text-align: center;
   margin: 0;
-  padding: 20px;
-  overflow-x: hidden;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .question-container {
   position: relative;
-  height: 500px;
-  max-width: 100%;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 60px;
 }
 
-.buttons {
-  margin-top: 40px;
-  position: relative;
-  height: 300px;
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 #yesBtn {
   background-color: #ff69b4;
   color: white;
-  position: relative;
-  z-index: 2;
   font-size: 20px;
   padding: 12px 24px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 #noBtn {
   background-color: #d3d3d3;
   position: absolute;
-  top: 150px;
+  top: 200px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
@@ -45,7 +50,7 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 5;
   transition: 0.00000000000001s ease;
 }
 
@@ -76,27 +81,15 @@ body {
 
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 22px;
   }
 
-  .question-container {
-    height: 550px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-    height: 320px;
-  }
-
-  #yesBtn,
-  #noBtn {
+  #yesBtn, #noBtn {
     font-size: 18px;
     padding: 10px 20px;
   }
 
   .result h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
